@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { HashRouter, Navigate, Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import { ConvertPage } from '@pages/convert';
 import { useAppDispatch, useAppSelector } from '@/app/store';
 import { loadCurrencies, selectCurrencyCodes } from '@features/app-setup';
@@ -16,11 +16,9 @@ export const AppRouter = () => {
     }, []);
 
     return (
-        <HashRouter>
-            <Routes>
-                <Route path="/" Component={ConvertPage} />
-                <Route element={<Navigate replace to="/" />} path="*" />
-            </Routes>
-        </HashRouter>
+        <Routes>
+            <Route path="/" Component={ConvertPage} />
+            <Route element={<Navigate replace to="/" />} path="*" />
+        </Routes>
     );
 };

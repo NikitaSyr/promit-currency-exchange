@@ -13,7 +13,7 @@ interface NumericInputProps extends Omit<InputProps, 'onChange'> {
 }
 
 export const NumericInput = (props: NumericInputProps) => {
-    const { value, onChange, maxLength = 16, withTooltip } = props;
+    const { value, onChange, maxLength = 16, withTooltip, ...restProps } = props;
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { value: inputValue } = e.target;
@@ -34,10 +34,11 @@ export const NumericInput = (props: NumericInputProps) => {
     if (!withTooltip) {
         return (
             <Input
-                {...props}
+                {...restProps}
+                value={value}
                 onChange={handleChange}
                 onBlur={handleBlur}
-                placeholder="Input a number"
+                placeholder="Введите число"
                 maxLength={maxLength}
             />
         );
@@ -54,7 +55,8 @@ export const NumericInput = (props: NumericInputProps) => {
     return (
         <Tooltip trigger={['focus']} title={title} placement="topLeft" overlayClassName={styles['numeric-input']}>
             <Input
-                {...props}
+                {...restProps}
+                value={value}
                 onChange={handleChange}
                 onBlur={handleBlur}
                 placeholder="Введите число"

@@ -23,10 +23,8 @@ export const conversionSlice = createAppSlice({
     name: 'conversion',
     initialState,
     reducers: create => ({
-        convertCurrencies: create.asyncThunk(
+        convertNewCurrencies: create.asyncThunk(
             async (dataToConvert: IConversionRequest) => {
-                console.log(dataToConvert);
-
                 return await getConversion(dataToConvert);
             },
             {
@@ -35,9 +33,9 @@ export const conversionSlice = createAppSlice({
                 },
                 fulfilled: (state, action) => {
                     state.isConverting = false;
-                    console.log(action.payload.rates);
                     console.log(state.currencyFrom);
-
+                    console.log(state.currencyTo);
+                    console.log(state.conversionAmount);
                     state.conversionResult = action.payload.rates[state.currencyTo].toString();
                 },
                 rejected: state => {
@@ -61,7 +59,7 @@ export const conversionSlice = createAppSlice({
     },
 });
 
-export const { convertCurrencies, changeCurrencyFrom, changeCurrencyTo, changeConversionAmount } =
+export const { convertNewCurrencies, changeCurrencyFrom, changeCurrencyTo, changeConversionAmount } =
     conversionSlice.actions;
 
 export const { selectIsConverting } = conversionSlice.selectors;
