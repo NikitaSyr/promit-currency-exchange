@@ -2,7 +2,7 @@ import React from 'react';
 import { AppRouter } from '../routes';
 import { Providers } from '../providers';
 import { Layout } from 'antd';
-import { Header } from '@features/header';
+import { Header } from '@widgets/header';
 
 import styles from './styles.module.css';
 

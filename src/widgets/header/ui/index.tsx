@@ -2,7 +2,7 @@ import { Col, Row, Select, Typography } from 'antd';
 import { useAppDispatch, useAppSelector } from '@/app/store';
 import React, { useMemo } from 'react';
 import { filterOption } from '@shared/lib/filters';
-import { changeMainCurrency, selectCurrencyCodes, selectMainCurrency } from '@features/app-setup';
+import { changeMainCurrency, selectCurrencyCodes, selectMainCurrency } from '@/app/setup';
 import { getCurrencyDictionary } from '@features/converter/lib';
 
 import styles from './styles.module.css';

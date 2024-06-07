@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { ConvertPage } from '@pages/convert';
-import { useAppDispatch, useAppSelector } from '@/app/store';
-import { loadCurrencies, selectCurrencyCodes } from '@features/app-setup';
+import { useAppDispatch, useAppSelector } from '../store';
+import { loadCurrencies, selectCurrencyCodes } from '../setup';
 
 export const AppRouter = () => {
     const dispatch = useAppDispatch();

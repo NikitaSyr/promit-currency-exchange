@@ -1,5 +1,5 @@
-import { ICurrencyCodeMap } from '@shared/api/currencies';
 import { ICurrency } from '../types';
+import { ICurrencyCodeMap } from '@entities/currencies';
 
 export const getCurrencyDictionary = (dictionary: ICurrencyCodeMap | null): ICurrency[] => {
     if (dictionary) {

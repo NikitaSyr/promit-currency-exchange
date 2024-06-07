@@ -2,13 +2,14 @@ import type { FormProps } from 'antd';
 import { Button, Col, Form, Input, message, Row, Select } from 'antd';
 import { useAppDispatch, useAppSelector } from '@/app/store';
 import React, { useMemo } from 'react';
-import { selectCurrencyCodes } from '@features/app-setup';
+import { selectCurrencyCodes } from '@/app/setup';
 import { getCurrencyDictionary } from '../lib';
 import { changeConversionAmount, changeCurrencyFrom, changeCurrencyTo, convertNewCurrencies } from '../model/slice';
 import { NumericInput } from '@shared/ui/numeric-input';
-import styles from './styles.module.css';
 import { SwapOutlined } from '@ant-design/icons';
 import { filterOption } from '@shared/lib/filters';
+
+import styles from './styles.module.css';
 
 const { Item } = Form;
 

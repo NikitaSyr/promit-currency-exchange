@@ -1,1 +1,1 @@
-export { filterOption } from './filter0ption/filterOption';
+export { filterOption } from './filter0ption';

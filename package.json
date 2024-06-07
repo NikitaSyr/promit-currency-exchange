@@ -15,7 +15,7 @@
     "lint:fix": "eslint --fix promit-currency-exchange",
     "type-check": "tsc --noEmit",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@ant-design/icons": "^5.3.7",

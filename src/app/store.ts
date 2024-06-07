@@ -6,9 +6,6 @@ import { rootReducer } from './rootReducer';
 import storage from 'redux-persist/lib/storage';
 import { FLUSH, PAUSE, PERSIST, persistReducer, persistStore, PURGE, REGISTER, REHYDRATE } from 'redux-persist';
 
-// `combineSlices` automatically combines the reducers using
-// their `reducerPath`s, therefore we no longer need to call `combineReducers`.
-// Infer the `RootState` type from the root reducer
 export type RootState = ReturnType<typeof rootReducer>;
 
 const persistConfig = {

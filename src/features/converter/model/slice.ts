@@ -1,7 +1,7 @@
 import { message } from 'antd';
 import { PayloadAction } from '@reduxjs/toolkit';
 import { createAppSlice } from '@/app/createAppSlice';
-import { getConversion, IConversionRequest } from '@shared/api/convert';
+import { getConversion, IConversionRequest } from '@entities/conversion';
 
 export interface ConverterSliceState {
     currencyFrom: string;
