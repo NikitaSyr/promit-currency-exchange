@@ -1,27 +1,9 @@
-# vite-template-redux
+Данное тестовое задание было создано для конвертации курсов валют. Результат работы выложен на странице: [https://nikitasyr.github.io/currency-exchange/](https://nikitasyr.github.io/promit-currency-exchange/).
 
-Uses [Vite](https://vitejs.dev/), [Vitest](https://vitest.dev/), and [React Testing Library](https://github.com/testing-library/react-testing-library) to create a modern [React](https://react.dev/) app compatible with [Create React Index](https://create-react-app.dev/)
+В качестве API использовалось "api.frankfurter.app/" 
 
-```sh
-npx degit reduxjs/redux-templates/packages/vite-template-redux my-app
-```
+Стек использованных технологий:
 
-## Goals
+React, Redux, Redux-Toolkit, Redux-Persist, Redux-Thunk, Axios, Antd и React-Router-Dom
 
-- Easy migration from Create React Index or Vite
-- As beginner friendly as Create React Index
-- Optimized performance compared to Create React Index
-- Customizable without ejecting
-
-## Scripts
-
-- `dev`/`start` - start dev server and open browser
-- `build` - build for production
-- `preview` - locally preview production build
-- `test` - launch test runner
-
-## Inspiration
-
-- [Create React Index](https://github.com/facebook/create-react-app/tree/main/packages/cra-template)
-- [Vite](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react)
-- [Vitest](https://github.com/vitest-dev/vitest/tree/main/examples/react-testing-lib)
+В качестве сборщика используется Vite
