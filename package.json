@@ -1,5 +1,6 @@
 {
   "name": "promit-currency-exchange",
+  "homepage": "https://NikitaSyr.github.io/promit-currency-exchange",
   "private": false,
   "version": "1.0.0",
   "type": "module",
@@ -12,13 +13,16 @@
     "format": "prettier --write promit-currency-exchange",
     "lint": "eslint promit-currency-exchange",
     "lint:fix": "eslint --fix promit-currency-exchange",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@ant-design/icons": "^5.3.7",
     "@reduxjs/toolkit": "^2.0.1",
     "antd": "^5.18.0",
     "axios": "^1.7.2",
+    "gh-pages": "^6.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^9.1.0",
